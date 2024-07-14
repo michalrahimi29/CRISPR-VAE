@@ -7,6 +7,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 """VAE framework, used for comparison to CVAE"""
+
+
 class VAE(nn.Module):
     def __init__(self, latent_size, input_size):
         super(VAE, self).__init__()

@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-from Evaluation import create_seq
 
 delta_values = [3, 11, 29]
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -23,12 +22,6 @@ def create_heat_map(latent_vectors, delta, L=10):
     """Create a heat map for latent vectors with a specific delta value."""
     num_sequences = latent_vectors.shape[0]
     heat_map = np.zeros((num_sequences, num_sequences))
-    """
-    for i in range(num_sequences):
-        for j in range(num_sequences):
-            if i != j:
-                heat_map[i, j] = H(latent_vectors[i], latent_vectors[j], delta)
-    """
     for i in range(num_sequences):
         for j in range(num_sequences):
             if i != j:
