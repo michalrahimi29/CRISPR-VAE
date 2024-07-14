@@ -27,3 +27,7 @@ python DeepCpf1/DeepCpf1.py 0_sequences.txt zero_results.txt
 ```python
 python DeepCpf1/DeepCpf1.py 99_sequences.txt ninetynine_results.txt
 ```
+For re-creating the histogram efficiency run Evaluation.py:
+```python
+python Evaluation.py
+```
