@@ -100,4 +100,3 @@ if __name__ == '__main__':
     for epoch in range(1, num_epochs + 1):
         train(epoch)
     avg_error = calculate_errors(model, test_seqs, [])
-    print(avg_error)

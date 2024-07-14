@@ -74,6 +74,11 @@ def calculate_errors(model, test_sequences, test_labels):
     avg_error_count = sum_errors / len(recon)
     overall_mistakes_percantage /= len(recon)
     seed_error_percantage = calculate_seed_error(test_seqs, recon)
+    print(f"The average number of errors after reconstruction: {avg_error_count}")
+    print(f"Percentage of sequences after reconstruction with more than 10 mistakes overall:"
+          f" {overall_mistakes_percantage * 100}")
+    print(f"Percentage of sequences after reconstruction with more than 2 mistakes in seed region:"
+          f" {overall_mistakes_percantage * 100}")
     return avg_error_count, overall_mistakes_percantage, seed_error_percantage
 
 
