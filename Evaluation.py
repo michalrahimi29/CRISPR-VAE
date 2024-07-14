@@ -2,6 +2,8 @@ import numpy as np
 import torch
 from matplotlib import pyplot as plt
 
+"""Here I implement the functions for evaluation as described in paper"""
+
 
 def one_hot(labels, class_size):
     """This function does one-hot encoding for labels"""
