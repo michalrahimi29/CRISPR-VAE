@@ -12,7 +12,7 @@ CRISPR-VAE employs a Variational Autoencoder (VAE) framework to create a structu
 The model is implemented with pyTorch 2.2.1 torchvision 0.17.1 and numpy 1.24.3.
 
 ## Run
-For running the evaluation process of CRISPR-VAE as described in paper run the following code:
+For running the training and evaluation process of CRISPR-VAE as described in paper run the following code:
 ```python
 python CRISPR_VAE.py 
 ```
