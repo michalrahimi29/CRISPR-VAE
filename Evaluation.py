@@ -1,6 +1,8 @@
 import numpy as np
 import torch
 from matplotlib import pyplot as plt
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 """Here I implement the functions for evaluation as described in paper"""
 
@@ -129,3 +131,7 @@ def hist_efficiency():
     plt.ylabel('Frequency')
     plt.title('Efficiency Prediction by seq-deepCpf1')
     plt.show()
+
+
+if __name__ == '__main__':
+    hist_efficiency()

@@ -98,7 +98,7 @@ def run_heatmap(test_sequences, test_labels):
     """Generate and display heat maps for latent vectors extracted from test sequences."""
     test_indeices = np.where(test_labels == 99)[0]
     label = one_hot(torch.tensor([99]), class_size)
-    all_sequences = torch.tensor(test_sequences[test_indeices])
+    all_sequences = test_sequences[test_indeices].clone().detach()
     latent_vectors = extract_latent_vectors(model, all_sequences, label)
     run(latent_vectors)
 
@@ -121,11 +121,7 @@ if __name__ == '__main__':
         train(epoch)
         
     avg_error = calculate_errors(model, test_seqs, encoded_labels)
-    print(avg_error)
     run_heatmap(test_seqs, np.array(test_labels))
 
     class_0_sequences = generate_sequences(model, 0, latent_size, latent_size, class_size)
     class_99_sequences = generate_sequences(model, 99, latent_size, latent_size, class_size)
-    """
-    hist_efficiency()
-    """

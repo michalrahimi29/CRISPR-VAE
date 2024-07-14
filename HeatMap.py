@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 delta_values = [3, 11, 29]
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-"""In this file we used distance heat maps to test the structure of the latent space."""
+"""In this file I used distance heat maps to test the structure of the latent space."""
 
 
 def calculate_hamming_distance(vec1, vec2):
