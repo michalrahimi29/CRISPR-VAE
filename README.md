@@ -18,5 +18,12 @@ python CRISPR_VAE.py
 ```
 For comparison with the VAE model run the folowing code:
 ```python
-python VAE.py 
+python VAE.py
+```
+In this study they used DeepCpf1 in order to predict the efficiency of the reconstructed sequences. To run DeepCpf1 you can either use the files in DeepCpf1 directory or run CRISPR_VAE.py to generate new sequences and copy them to the DeepCpf1 directory to predict their efficiency. To run DeepCpf1 see the following example where first input is the file input of the sequences you want to predict their efficiency (0_sequences.txt or 99_sequences.txt) and the second input is the name to file with predictions (for predicting the zero class sequences give the name zero_results.txt or for predicting the 99 class sequences give the name ninetynine_results.txt):
+```python
+python DeepCpf1/DeepCpf1.py 0_sequences.txt zero_results.txt
+```
+```python
+python DeepCpf1/DeepCpf1.py 99_sequences.txt ninetynine_results.txt
 ```
